@@ -28,6 +28,8 @@ jobs:
           node-version: '16'
 
       - uses: bahmutov/npm-install@v1
+        with:
+          working-directory: app
 
       - name: Build app
         run: NITRO_PRESET=node-server NODE_ENV=production npm run build --production
